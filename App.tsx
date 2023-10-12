@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, Image} from 'react-native';
+import {StyleSheet, Image, View} from 'react-native';
 import Header from './components/Header';
+import Formulario from './components/Formulario';
 
 const App = () => {
   return (
@@ -10,6 +11,9 @@ const App = () => {
         source={require('./assets/img/cryptomonedas.png')}
         style={styles.imagen}
       />
+      <View style={styles.contenido}>
+        <Formulario/>
+      </View>
     </>
   );
 }
@@ -17,7 +21,11 @@ const App = () => {
 const styles = StyleSheet.create({
   imagen: {
     width: '100%',
-    height: 150
+    height: 150,
+    marginBottom: 30
+  },
+  contenido: {
+    marginHorizontal: '2.5%'
   }
 });
 

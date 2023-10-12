@@ -16,11 +16,13 @@ const styles = StyleSheet.create({
         fontFamily: "Lato-Black",
         backgroundColor:'#5E49E2',
         color: '#FFF',
-        paddingBottom: 10,
+        paddingBottom: 15,
         textAlign: 'center',
         textTransform: 'uppercase',
         fontSize: 20,
-        marginBottom: 30
+        marginBottom: 30,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20
     }
 })
 
