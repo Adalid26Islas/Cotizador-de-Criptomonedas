@@ -3,9 +3,8 @@ import { Text, View, StyleSheet, TouchableHighlight, Alert } from "react-native"
 import { Picker } from '@react-native-community/picker';
 import axios from 'axios';
 
-const Formulario = () => {
-    const [moneda, guardarMoneda] = useState('');
-    const [criptomoneda, guardarCriptomoneda] = useState('');
+const Formulario = ({moneda, guardarMoneda, criptomoneda, guardarCriptomoneda, guardarConsultarApi}) => {
+    
     const [criptomonedas, guardarCriptomonedas] = useState([]);
 
     //useEffect se usa para consumir datos de un API, es lo mas recomendado
@@ -32,6 +31,7 @@ const Formulario = () => {
             mostrarAlerta();
             return;
         }
+        guardarConsultarApi(true)
     }
     //Funcion que muestra una alerta
     const mostrarAlerta = () => {
